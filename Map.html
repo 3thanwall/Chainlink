@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/ocr-a-extended');
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: 'OCR A Extended', sans-serif;
+            background-color: white;
+        }
+
+        .navbar {
+            background-color: #F5AD2A;
+            padding: 15px 0;
+        }
+
+        .navbar-nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white !important;
+            background: #F5AD2A;
+            padding: 8px 16px;
+            border-radius: 12px;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .nav-link.home:hover {
+            background-color: #4F9EBA;
+        }
+
+        .nav-link.map:hover {
+            background-color: #e89c1f;
+        }
+
+        .nav-link.identity:hover {
+            background-color: #ED3181;
+        }
+
+        .nav-link.scooter:hover {
+            background-color: #45AE7A;
+        }
+
+        .main-content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .footer-container {
+            width: 100%;
+            text-align: center;
+            background: white;
+            padding: 20px 0;
+            flex-shrink: 0;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 3px;
+            background-color: #F5AD2A;
+            margin-bottom: 10px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            color: #F5AD2A;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .footer img {
+            max-width: 20%;
+            height: auto;
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 700px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 991px) {
+            .nav-link {
+                font-size: 0.85rem;
+            }
+
+            .footer-text {
+                font-size: 0.85rem;
+            }
+
+            iframe {
+                height: 300px !important;
+            }
+
+            .main-content .d-flex {
+                flex-direction: column-reverse !important;
+            }
+
+            .main-content iframe {
+                width: 100%;
+                margin: 0 0 1rem 0 !important;
+            }
+
+            .main-content > div > div {
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .main-content .w-50 {
+                width: 100% !important;
+                padding-top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link home" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link map" href="Map.html">Map</a></li>
+                    <li class="nav-item"><a class="nav-link identity" href="Identity.html">Identity</a></li>
+                    <li class="nav-item"><a class="nav-link scooter" href="Scooters.html">Scooters & Bikes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="d-flex justify-content-center align-items-center w-100 flex-wrap flex-lg-nowrap">
+
+            <!-- Embedded Map -->
+            <div style="width: 40%; margin-right: 2rem; margin-bottom: 1rem;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5522880661324!2d-0.11769882430645393!3d51.503082911019945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b834348a17%3A0xc87678f6ead1138c!2sWaterloo!5e0!3m2!1sen!2suk!4v1743454747678!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Text Section -->
+            <div class="w-50 p-4" style="background: #fff9ec; border-radius: 12px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="Images/MapLogo.png" alt="Map Logo" style="max-width: 60%; height: auto;">
+                </div>
+
+                <h3 style="color:#F5AD2A; font-weight:bold; text-align: center; margin-bottom:15px;">Find your Ride</h3>
+                <p style="font-size: 1.3rem; text-align: center;">
+                    Chainlink provides a fast, flexible, and eco-friendly transport solution across London, making short trips easier than ever. With scooters and bikes available on nearly every street corner, residents and visitors can effortlessly find a ride within walking distance. Whether you're commuting to work, exploring the city's famous landmarks, or simply enjoying a leisurely trip along the Thames, Chainlink ensures that reliable transport is always at hand. The service is designed to seamlessly integrate with the rhythm of the city, allowing users to pick up and drop off vehicles wherever convenient. While Chainlink vehicles are spread widely throughout London, Waterloo has become the central hub, offering the highest concentration of bikes and scooters. Its prime location near major transport links and tourist attractions makes it the heart of Chainlink’s network. From Waterloo, riders can easily branch out to popular spots like Soho, Tower Bridge, and Hyde Park with ease and confidence.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-text">Enjoy the ride</div>
+            <div class="footer">
+                <img src="Images/Footer.png" alt="Footer Image" class="img-fluid">
+            </div>
+            <div class="footer-text">Enjoy the ride</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

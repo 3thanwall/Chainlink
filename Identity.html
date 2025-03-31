@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/ocr-a-extended');
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: 'OCR A Extended', sans-serif;
+            background-color: white;
+        }
+
+        .navbar {
+            background-color: #ED3181;
+            padding: 15px 0;
+        }
+
+        .navbar-nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white !important;
+            background: #ED3181;
+            padding: 8px 16px;
+            border-radius: 12px;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .nav-link.home:hover {
+            background-color: #4F9EBA;
+        }
+
+        .nav-link.map:hover {
+            background-color: #F5AD2A;
+        }
+
+        .nav-link.identity:hover {
+            background-color: #ee69a2;
+        }
+
+        .nav-link.scooter:hover {
+            background-color: #45AE7A;
+        }
+
+        .main-content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .footer-container {
+            width: 100%;
+            text-align: center;
+            background: white;
+            padding: 20px 0;
+            flex-shrink: 0;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 3px;
+            background-color: #ED3181;
+            margin-bottom: 10px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            color: #ED3181;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .footer img {
+            max-width: 20%;
+            height: auto;
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 991px) {
+            .nav-link {
+                font-size: 0.85rem;
+            }
+
+            .footer-text {
+                font-size: 0.85rem;
+            }
+
+            h3 {
+                font-size: 1rem !important;
+            }
+
+            p {
+                font-size: 0.8rem !important;
+            }
+
+            .carousel-inner img {
+                height: 300px !important;
+            }
+
+            #imageCarousel {
+                width: 80% !important;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link home" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link map" href="Map.html">Map</a></li>
+                    <li class="nav-item"><a class="nav-link identity" href="Identity.html">Identity</a></li>
+                    <li class="nav-item"><a class="nav-link scooter" href="Scooters.html">Scooters & Bikes</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="d-flex justify-content-center align-items-center w-100 flex-wrap flex-lg-nowrap">
+
+            <!-- Carousel -->
+            <div id="imageCarousel" class="carousel slide me-4 mb-4 mb-lg-0" data-bs-ride="carousel" data-bs-interval="5000" style="width: 40%;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner rounded-3 shadow">
+                    <div class="carousel-item active">
+                        <img src="Images/FemaleBiker1.jpg" class="d-block w-100" style="height:700px; object-fit:cover;" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/FemaleBiker2.jpg" class="d-block w-100" style="height:700px; object-fit:cover;" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/FemaleBiker3.jpg" class="d-block w-100" style="height:700px; object-fit:cover;" alt="Image 3">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Text Section -->
+            <div class="w-50 p-4" style="background: #f8f9fa; border-radius: 12px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="Images/FemaleLogo.png" alt="Chainlink Logo" style="max-width: 60%; height: auto;">
+                </div>
+
+                <h3 style="color:#ED3181; font-weight:bold; text-align: center; margin-bottom:15px;">Our Cycling Identity</h3>
+                <p style="font-size: 1.3rem; text-align: center;">
+                    In 2022, Chainlink took an important step forward by expanding its identity and making our electric bike service more inclusive for all riders. After recognizing a noticeable gap in the market for female-friendly electric bikes, we introduced customizable designs aimed at celebrating individuality and diversity. Female riders can now enjoy bikes tailored to their unique styles, with adjustable frames, a wide selection of color options, and accessory packs designed specifically for comfort and personal expression. This update was officially launched in early 2023 and has since become a key part of Chainlink’s mission. By bridging the gap between style, comfort, and performance, we have created an experience that caters equally to male and female riders. The feedback has been overwhelmingly positive, as riders now feel more connected to their bikes and the community. Chainlink proudly stands for inclusivity, enjoyment, and freedom, making every journey memorable.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-text">Enjoy the ride</div>
+            <div class="footer">
+                <img src="Images/Footer.png" alt="Footer Image" class="img-fluid">
+            </div>
+            <div class="footer-text">Enjoy the ride</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
